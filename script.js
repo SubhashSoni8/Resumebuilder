@@ -57,17 +57,23 @@ function generateResume() {
     let str = '';
 
     for (let e of wes) {
-        str += '<li>${e.value}</li>';
+        str += `<li>${e.value}</li>`;
+        console.log(str);
     }
 
     document.getElementById('weT').innerHTML = str;
 
     let aqs = document.getElementsByClassName('aqField');
-    let str1 = '';
+    let str1 = "";
     for (let e of aqs) {
-        str1 += '<li> ${e.value} </li>';
+        
+        str1 += `<li>${e.value}</li>`;
     }
     document.getElementById('aqT').innerHTML = str1;
+
+
+    document.getElementById('resume-form').style.display='none';
+    document.getElementById('resume-template').style.display='block';
 
     //    let contactField=document.getElementById('contactField').value;
     //    let contactT=document.getElementById('contactT');
@@ -89,4 +95,8 @@ function generateResume() {
     //    let linkedinT=document.getElementById('linkedinT');
     //    linkedinT.innerHTML=linkedinField;
 
+}
+
+function printResume() {
+    window.print();
 }

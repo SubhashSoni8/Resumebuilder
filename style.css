@@ -4,6 +4,9 @@ body{
 #resume-form{
   
 }
+#resume-template{
+    display: none;
+}
 
 .myimg{
     border: 1px solid black;
